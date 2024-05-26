@@ -49,3 +49,10 @@
 // 0 <= nums.length <= 100
 // 0 <= nums[i] <= 50
 // 0 <= val <= 100
+
+var removeElement = function(nums, val) {
+    let filteredNums = nums.filter(x => x !== val);
+    nums.length = 0; // Clear the original array
+    nums.push(...filteredNums); // Add the filtered elements back to the original array
+    return nums.length; // Return the new length of the array
+};
